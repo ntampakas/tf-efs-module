@@ -11,6 +11,6 @@ resource "aws_efs_file_system" "k8s" {
 
 resource "aws_efs_mount_target" "priv-1a" {
   file_system_id  = aws_efs_file_system.provers.id
-  subnet_id       = var.subnet.id
-  security_groups = [var.secgroup.id]
+  subnet_id       = "subnet-0422c110d33557d33"
+  security_groups = ["sg-0382ff14a1353aae4"]
 }
