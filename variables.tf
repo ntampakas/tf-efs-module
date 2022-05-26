@@ -5,13 +5,13 @@ variable "creation_token" {
   type        = string
 }
 
-variable "throughput" {
+variable "throughput_mode" {
   description = "Set how your file system's throughput limits are determined"
   type        = string
   default     = "bursting"
 }
 
-variable "performance" {
+variable "performance_mode" {
   description = "Set your file system's performance mode based on IOPS required"
   type        = string
   default     = "generalPurpose"
@@ -30,6 +30,5 @@ variable "subnets" {
 
 variable "security_groups" {
   type        = list(string)
-  sensitive   = true
   description = "Security Group IDs"
 }
